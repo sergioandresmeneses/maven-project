@@ -6,8 +6,10 @@ pipeline {
 
   stages {
     stage ('Initializate') {
-      sh 'echo $PATH'
-      sh 'echo $M2_HOME'
+      step{
+        sh 'echo $PATH'
+        sh 'echo $M2_HOME'
+      }
     }
     stage ('Build') {
       steps {
