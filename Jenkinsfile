@@ -6,12 +6,12 @@ pipeline {
 
   stages {
     stage ('Initializate') {
-      sh '''echo "PATH = ${PATH}"'''
-      sh '''echo "M2_HOME = ${M2_HOME}"'''
+      sh 'echo "PATH = ${PATH}"'
+      sh 'echo "M2_HOME = ${M2_HOME}"'
     }
     stage ('Build') {
       steps {
-        sh 'echo $MAVEN_HOME && echo $M2_HOME && $JAVA_HOME'
+        sh 'echo "This is the MV Home " $MAVEN_HOME && echo "This is the MV Home2 " $M2_HOME && "This is the JAVA Home " $JAVA_HOME'
         sh 'mvn clean package'
       }
     }
