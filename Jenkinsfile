@@ -1,7 +1,7 @@
 pipeline {
   agent any
   tools {
-    maven 'localMaven'
+    maven 'mave 3.6.0'
   }
 
   stages {
