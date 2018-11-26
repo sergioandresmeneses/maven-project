@@ -6,7 +6,7 @@ pipeline {
 
   stages {
     stage ('Initializate') {
-      step{
+      steps {
         sh 'echo $PATH'
         sh 'echo $M2_HOME'
       }
